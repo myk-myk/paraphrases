@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block title %} <title>Home</title> {% endblock %}
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{% static 'changer_site/img/icon.png' %}" type="image/png">
+    <link href="{% static 'changer_site/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'changer_site/css/style.css' %}" rel="stylesheet">
+</head>
+{% endblock %}
+<body>
+{% block header %}
+<header id="header" class="header">
+            <div class="header_top_section">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 center">
+                            <div class="logo-text center">
+                                <h3><a href="{% url 'home' %}">Text changer</a></h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 site_information">
+                            <div class="full">
+                                <div class="main_menu">
+                                    <nav class="navbar navbar-toggleable-md">
+                                        <div class="collapse navbar-collapse justify-content-md collapse show">
+                                            <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                    <a class="nav-link light" href="{% url 'home' %}">Home</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link light" href="{% url 'paraphrase' %}">Paraphrase</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link light" href="#"><i class="fa fa-magnific-glass"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+{% endblock %}
+{% block main %}
+<div class="content">
+    <div class="gradient-bg animate-bg d-flex flex-column justify-content-center w-100 h-100">
+        <div class="text-bg-parent justify-content-center">
+            <div class="text-bg justify-content-center"></div>
+                <div class="row img-text">
+                    <div class="paraphrase">
+                        <h2 class="mb-5">Try Paraphrase now!</h2>
+                        <button class="button try-button" onclick="location.href='{% url "paraphrase" %}';">Try Paraphrase!</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block footer %}
+<footer>
+
+</footer>
+{% endblock %}
+{% block copyright %}
+    <div class="cpy">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>© Copyright 2023 Mykola Sannikov. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>
+</html>

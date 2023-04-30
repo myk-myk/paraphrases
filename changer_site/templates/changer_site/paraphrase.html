@@ -1,0 +1,57 @@
+{% extends 'changer_site/index.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% block title %} <title>Paraphrase</title> {% endblock %}
+<body>
+{% block main %}
+<div class="content">
+    <div class="light-bg animate-bg d-flex flex-column justify-content-center w-100 h-100">
+        <div class="text-bg-parent justify-content-center">
+            <div class="text-bg justify-content-center"></div>
+            <div class="row img-text">
+                <div class="form-cont">
+                    <div class="submit-form output-form">
+                        <div class="output-field justify-content-center">
+                            <p>Result:</p>
+                            <textarea type="text" placeholder="Result will be shown here" readonly>{{ data.tree }}</textarea>
+                        </div>
+                    </div>
+                    <form class="submit-form" method="get" action="{% url 'paraphrase' %}?{{ param_name }}={{ data.tree }}">
+                        <div class="input-field">
+                            <textarea type="text" id="input_tree" name="tree" placeholder="Enter your tree"></textarea>
+                            <div class="d-block">
+                                <label  for="print">Type of text output: </label>
+                                <select class="old-select" name="print_options" id="print">
+                                    <option value="string" selected>String</option>
+                                    <option value="tree">Tree</option>
+                                    <option value="json">Json</option>
+                                </select>
+                                <div class="new-select">
+                                    <div class="selection">
+                                        <p>
+                                            <span></span>
+                                            <i></i>
+                                        </p>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-block">
+                            <button class="button try-button" id="reset_button" type="reset" value="Reset">Clear</button>
+                            <button class="button try-button" type="submit" value="Submit">Edit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="{% static 'changer_site/js/jquery-3.6.0.js' %}"></script>
+    <script src="{% static 'changer_site/js/jquery-ui.js' %}"></script>
+    <script src="{% static 'changer_site/js/textarea.js' %}"></script>
+    <script src="{% static 'changer_site/js/select.js' %}"></script>
+{% endblock %}
+</body>
+</html>
