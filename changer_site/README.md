@@ -10,7 +10,7 @@ Django app folder.
   - View **'paraphrase'** connects *'/paraphrase'* URL with the *'paraphrase.html'* page and processes query parameters in HTTP 'GET' method
       (*'tree'* - input constituency-based parse tree of sentences, *'limit'* (default: 20) - output variants display limit, *'print_options'* (string/tree/json) - variants of output view).
       Calls *'make_variations()'* function from *'tree.py'* file to transform input tree into output variations data, *'Data'* class to form proper data for Jinja to output.
-      Returns *render()* function with *'info'* parameter. It calls a *make_variations()* function from the *tree.py* file.              
+      Returns *render()* function with *'info'* parameter.        
   - Class **'Data'** forms a proper and comfortable data view for Jinja to output.              
   - Class **'GrammarTree'** has a similar to *'paraphrase'* view logic but returns *Django Rest Framework response* for API in json format.             
 - File **'tree.py'** contains all logic that generates a list of variations of sentence change from a string of sentence's constituency-based parse tree:
