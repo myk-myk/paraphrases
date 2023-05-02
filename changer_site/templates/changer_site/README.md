@@ -1,4 +1,4 @@
-#templates          
+### templates          
 changer_site app's templates folder               
 
 - File **'index.html'** is the app's start page (URL: *''*) HTML file.             
