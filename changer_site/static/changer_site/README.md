@@ -12,4 +12,4 @@ changer_site app's static files
 - Folder **'js'** contains the app's JavaScript files:
   - Files **'jquery-3.6.0.js'** and **'jquery-ui.js'** are standard jQuery JS files for different UI elements and animations for both *'index.html'* and *'paraphrase.html'* files.         
   - File **'select.js'** is a JavaScript file for the *select* input tag view and animation in the *'paraphrase.html'* file.            
-  - File **'textarea.js'** is a JavaScript file for *textarea* input tag data saving despite a page refresh in the *'paraphrase.html'* file.           
+  - File **'textarea.js'** is a JavaScript file for the *textarea* input tag data saving despite a page refresh in the *'paraphrase.html'* file.           
