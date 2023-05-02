@@ -1,6 +1,9 @@
 #changer_site          
 Django app folder.      
 
+- Folder **'migrations'** contains the app's db migrations.               
+- Folder **'static'** contains the app's static files (CSS, JS, img, fonts files, etc.).            
+- Folder **'templates'* contains the app's templates files (HTML files).           
 - Files **'admin.py'**, **'apps.py'**, **'models.py'**, and **'tests.py'** are standard Django files for adding apps, db models, and tests (not changed).             
 - File **'urls.py'** contains URLs of all defined app's views and connects URL with a view:           
   - Path **''** is the app's start page. Only contains a link to the *'paraphrase'* page.          
