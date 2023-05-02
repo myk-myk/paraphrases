@@ -19,8 +19,8 @@ Django app folder.
 - File **'tree.py'** contains all logic that generates a list of variations of sentence change from a string of sentence's constituency-based parse tree:
   - Function **make_tree()** generates a *nltk.ParentedTree* from a string of sentence's constituency-based parse tree if it is possible, else it returns an *error string*.
   - Function **get_children()** returns an *nltk.\<TreeType>.subtrees()* generator, which contains only a node's children.
-  - Function **combinations()** returns a *dictionary of constituency-based parse tree's nodes* (every node has its number as a dict key), which could be replaced 
-    and a list of all combinations of nodes replace (in number representation).            
+  - Function **combinations()** returns a *dictionary of constituency-based parse tree's nodes*, which could be replaced (every node has its number as a dict key) 
+    and a *list of all combinations of nodes replace* (in number representation).            
   - Function **make_variations()** is a main function that contains logic to generate a list of variations of sentence change from a string of sentence's constituency-based parse tree 
     and it calls all other functions.
   - Construction *if \__name__ == "\__main__"* there is only for debugging and starting a *tree.py* file as an independent project.
