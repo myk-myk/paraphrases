@@ -1,4 +1,4 @@
-#static
+#static                 
 changer_site app's static files     
 
 - Folder **'css'** contains the app's CSS files:
