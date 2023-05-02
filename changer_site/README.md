@@ -1,4 +1,4 @@
-#changer_site          
+### changer_site          
 Django app folder.      
 
 - Folder **'migrations'** contains the app's db migrations.               
